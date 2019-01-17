@@ -1,14 +1,12 @@
-const express = require('express');
-const helmet = require('helmet');
+// const express = require('express');
+const server = require('./server');
+// const bearRoutes = require('./allRoutes/bearRoutes');
+// const zooRoutes = require('./allRoutes/zooRoutes');
+// server.use('/api/zoos', zooRoutes);
+// server.use('/api/daBears', bearRoutes);
 
-const server = express();
 
-server.use(express.json());
-server.use(helmet());
-
-// endpoints here
-
-const port = 3300;
+const port = process.env.PORT || 7304;
 server.listen(port, function() {
-  console.log(`\n=== Web API Listening on http://localhost:${port} ===\n`);
+  console.log(`\n=== Web API Listening on === \n=== http://localhost:${port} ===\n`);
 });
